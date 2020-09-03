@@ -12,8 +12,23 @@ const exampleConfig: TextConfigType = {
 
 const {Text} = createTextSystem(exampleConfig);
 
-export const CustomTextExample: FC<{}> = () => {
+export const CustomTextExample: React.FC<{}> = () => {
   return <Text size="h1" />;
+};
+
+export const CustomTextExample2: React.FC<{}> = () => {
+  return (
+    <>
+      <Text>Default</Text>
+      <Text color="primary">Primary color</Text>
+      <Text size="h1" color="primary">
+        h1 + primary color
+      </Text>
+      <Text size="h2" color="secondary" weight="bold">
+        h2 + primary color + bold
+      </Text>
+    </>
+  );
 };
 
 export {Text};
